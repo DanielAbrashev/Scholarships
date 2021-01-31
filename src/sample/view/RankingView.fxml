@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RankingViewController">
+    <children>
+        <Button fx:id="showRankingButton" layoutX="132.0" layoutY="85.0" mnemonicParsing="false" onAction="#showRanking" text="Покажи" />
+        <VBox layoutX="97.0" layoutY="24.0" spacing="4.0">
+            <children>
+                <TextField fx:id="amountOfMoney" prefHeight="25.0" prefWidth="130.0" promptText="Сума" />
+                <TextField fx:id="numberOfStudents" prefHeight="25.0" prefWidth="79.0" promptText="Брой студенти" />
+            </children>
+        </VBox>
+        <VBox layoutX="9.0" layoutY="28.0" prefHeight="75.0" prefWidth="81.0" spacing="12.0">
+            <children>
+                <Label text="Сума" />
+                <Label text="Брой студенти" />
+            </children>
+        </VBox>
+        <Separator layoutY="14.0" prefHeight="4.0" prefWidth="600.0" />
+        <Separator layoutX="251.0" layoutY="14.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="7.0" />
+        <TableView fx:id="ranking" editable="true" layoutX="282.0" layoutY="40.0" prefHeight="541.0" prefWidth="668.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="studentNameColumn" prefWidth="165.4285888671875" text="Студент" />
+                <TableColumn fx:id="facultyNumberColumn" prefWidth="159.5714111328125" text="Факултетен номер" />
+                <TableColumn fx:id="scoreColumn" minWidth="0.0" prefWidth="78.71435546875" text="Бал" />
+                <TableColumn fx:id="scholarshipColumn" minWidth="0.0" prefWidth="78.71435546875" text="Сума" />
+                <TableColumn fx:id="scholarshipPerMonthColumn" minWidth="0.0" prefWidth="78.71435546875" text="На месец" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

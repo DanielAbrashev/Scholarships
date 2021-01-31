@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SpecialtyController">
+    <children>
+        <TextField fx:id="specialtyIdText" layoutX="282.0" layoutY="63.0" prefHeight="25.0" prefWidth="148.0" promptText="Предмет" text="Специалност" />
+        <Label layoutX="283.0" layoutY="43.0" text="Специалност" />
+        <Button fx:id="searchSpecialtyBtn" layoutX="285.0" layoutY="98.0" mnemonicParsing="false" onAction="#searchSpecialty" prefHeight="25.0" prefWidth="56.0" text="Търси" />
+        <Button fx:id="deleteSpecialtyBtn" layoutX="372.0" layoutY="97.0" mnemonicParsing="false" onAction="#deleteSpecialty" prefHeight="25.0" prefWidth="58.0" text="Изтрий" />
+        <Button fx:id="addSpecialtyBtn" layoutX="122.0" layoutY="63.0" mnemonicParsing="false" onAction="#insertSpecialty" text="Добави" />
+        <VBox layoutX="97.0" layoutY="24.0" spacing="4.0">
+            <children>
+                <TextField fx:id="specialtyNameText" prefHeight="25.0" prefWidth="130.0" promptText="Предмет" text="Специалност" />
+            </children>
+        </VBox>
+        <VBox layoutX="9.0" layoutY="28.0" prefHeight="75.0" prefWidth="81.0" spacing="12.0">
+            <children>
+                <Label text="Специалност" />
+            </children>
+        </VBox>
+        <Separator layoutY="14.0" prefHeight="4.0" prefWidth="600.0" />
+        <Separator layoutX="251.0" layoutY="14.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="7.0" />
+        <TableView fx:id="specialtyTable" editable="true" layoutX="282.0" layoutY="149.0" prefHeight="432.0" prefWidth="469.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="specialtyIdColumn" prefWidth="57.0" text="№" />
+                <TableColumn fx:id="specialtyNameColumn" prefWidth="159.5714111328125" text="Специалност" />
+            </columns>
+        </TableView>
+        <Button fx:id="searchSpecialtysBtn" layoutX="461.0" layoutY="97.0" mnemonicParsing="false" onAction="#searchSpecialtys" prefHeight="25.0" prefWidth="139.0" text="Търси всички" />
+    </children>
+</AnchorPane>

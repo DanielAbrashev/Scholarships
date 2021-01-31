@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddMarkController">
+    <children>
+        <TextField fx:id="markIdText" layoutX="282.0" layoutY="63.0" prefHeight="25.0" prefWidth="148.0" promptText="Предмет" text="фак. номер" />
+        <Label layoutX="283.0" layoutY="43.0" text="Студент (фак. номер)" />
+        <Button fx:id="searchMarkBtn" layoutX="285.0" layoutY="98.0" mnemonicParsing="false" onAction="#searchMark" prefHeight="25.0" prefWidth="56.0" text="Търси" />
+        <Button fx:id="deleteMarkBtn" layoutX="347.0" layoutY="97.0" mnemonicParsing="false" onAction="#deleteMark" prefHeight="25.0" prefWidth="106.0" text="Изтрий оценка" />
+        <Button fx:id="addMarkBtn" layoutX="133.0" layoutY="122.0" mnemonicParsing="false" onAction="#insertMark" text="Добави" />
+        <VBox layoutX="97.0" layoutY="24.0" spacing="4.0">
+            <children>
+                <TextField fx:id="facultyNumberText" prefHeight="25.0" prefWidth="130.0" promptText="Предмет" text="Фак. номер" />
+            <ComboBox fx:id="subjectText" prefWidth="150.0" promptText="Предмет" />
+                <TextField fx:id="valueText" prefHeight="25.0" prefWidth="79.0" promptText="Оценка" />
+            </children>
+        </VBox>
+        <VBox layoutX="9.0" layoutY="28.0" prefHeight="75.0" prefWidth="92.0" spacing="12.0">
+            <children>
+                <Label text="Фак. номер" />
+                <Label text="Предмет" />
+                <Label text="Оценка" />
+            </children>
+        </VBox>
+        <Separator layoutY="14.0" prefHeight="4.0" prefWidth="600.0" />
+        <Separator layoutX="257.0" layoutY="14.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="7.0" />
+        <TableView fx:id="markTable" editable="true" layoutX="282.0" layoutY="149.0" prefHeight="432.0" prefWidth="469.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="facultyNumberColumn" prefWidth="125.5714111328125" text="Студент" />
+                <TableColumn fx:id="subjectNameColumn" prefWidth="97.4285888671875" text="Предмет" />
+                <TableColumn fx:id="valueColumn" prefWidth="159.5714111328125" text="Оценка" />
+            </columns>
+        </TableView>
+        <Button fx:id="searchMarksBtn" layoutX="461.0" layoutY="97.0" mnemonicParsing="false" onAction="#searchMarks" prefHeight="25.0" prefWidth="139.0" text="Търси всички" />
+    </children>
+</AnchorPane>

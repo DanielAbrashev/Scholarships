@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SubjectController">
+    <children>
+        <TextField fx:id="subjectIdText" layoutX="282.0" layoutY="63.0" prefHeight="25.0" prefWidth="148.0" promptText="Предмет" />
+        <Label layoutX="283.0" layoutY="43.0" text="Предмет" />
+        <Button fx:id="searchSubjectBtn" layoutX="285.0" layoutY="98.0" mnemonicParsing="false" onAction="#searchSubject" prefHeight="25.0" prefWidth="56.0" text="Търси" />
+        <Button fx:id="deleteSubjectBtn" layoutX="372.0" layoutY="97.0" mnemonicParsing="false" onAction="#deleteSubject" prefHeight="25.0" prefWidth="58.0" text="Изтрий" />
+        <Button fx:id="addSubjectBtn" layoutX="133.0" layoutY="122.0" mnemonicParsing="false" onAction="#insertSubject" text="Добави" />
+        <VBox layoutX="97.0" layoutY="24.0" spacing="4.0">
+            <children>
+                <TextField fx:id="nameText" prefHeight="25.0" prefWidth="130.0" promptText="Предмет" />
+                <TextField fx:id="specialty" prefHeight="25.0" prefWidth="79.0" promptText="Специалност" />
+                <TextField fx:id="semester" prefHeight="25.0" prefWidth="79.0" promptText="Семестър" />
+            </children>
+        </VBox>
+        <VBox layoutX="9.0" layoutY="28.0" prefHeight="75.0" prefWidth="81.0" spacing="12.0">
+            <children>
+                <Label text="Предмет" />
+                <Label text="Специалност" />
+                <Label text="Семестър" />
+            </children>
+        </VBox>
+        <Separator layoutY="14.0" prefHeight="4.0" prefWidth="600.0" />
+        <Separator layoutX="251.0" layoutY="14.0" orientation="VERTICAL" prefHeight="333.0" prefWidth="7.0" />
+        <TableView fx:id="subjectTable" editable="true" layoutX="282.0" layoutY="149.0" prefHeight="432.0" prefWidth="469.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="subjectIdColumn" prefWidth="57.0" text="№" />
+                <TableColumn fx:id="subjectNameColumn" prefWidth="165.4285888671875" text="Предмет" />
+                <TableColumn fx:id="specialtyColumn" prefWidth="159.5714111328125" text="Специалност" />
+                <TableColumn fx:id="semesterColumn" minWidth="0.0" prefWidth="78.71435546875" text="Семестър" />
+            </columns>
+        </TableView>
+        <Button fx:id="searchSubjectsBtn" layoutX="461.0" layoutY="97.0" mnemonicParsing="false" onAction="#searchSubjects" prefHeight="25.0" prefWidth="139.0" text="Търси всички" />
+    </children>
+</AnchorPane>
